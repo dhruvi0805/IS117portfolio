@@ -1,29 +1,32 @@
-/* Bold, clean UI with a pop of color — implementation only */
+/* Bold, clean UI in greens + beige */
 :root{
-	--accent:#0456d9; /* pop color - strong blue */
-	--bg:#ffffff;
-	--muted:#677089;
+	--darkest-green:#1F3623;
+	--medium-green:#4F6642;
+	--beige:#FBF9F0; /* lighter beige */
+	--muted:#6b6f64;
 	--max-width:1000px;
 	--radius:12px;
 }
 
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial;color:#0f1724;background:var(--bg);-webkit-font-smoothing:antialiased}
 .container{max-width:var(--max-width);margin:0 auto;padding:28px}
-header{border-bottom:1px solid #f0f2f7;padding:18px 0}
+html,body{height:100%;margin:0;font-family:'Merriweather', Georgia, 'Times New Roman', serif;color:var(--darkest-green);background:var(--beige);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-width);margin:0 auto;padding:28px}
+.container{max-width:var(--max-width);margin:0 auto;padding:28px}
+header{border-bottom:1px solid rgba(31,54,35,0.06);padding:18px 0}
 nav a{margin-right:18px;color:var(--muted);text-decoration:none;font-weight:600}
-nav a:hover{color:var(--accent)}
+nav a:hover{color:#ffffff}
 
 #hero{padding:56px 0}
-#hero h1{font-size:36px;margin:0 0 10px;line-height:1.05;font-weight:700;color:#071540}
+#hero h1{font-size:36px;margin:0 0 10px;line-height:1.05;font-weight:700;color:var(--darkest-green)}
 #hero p{color:var(--muted);margin:0 0 18px;font-size:16px}
 
-.cta{display:inline-block;background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;margin-right:12px;font-weight:700;box-shadow:0 6px 18px rgba(4,86,217,0.12);transition:transform .18s ease,box-shadow .18s ease}
-.cta:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(4,86,217,0.14)}
+.cta{display:inline-block;background:var(--medium-green);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;margin-right:12px;font-weight:700;box-shadow:0 6px 18px rgba(79,102,66,0.08);transition:transform .18s ease,box-shadow .18s ease}
+.cta:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(79,102,66,0.12)}
 
-.secondary{display:inline-block;background:transparent;color:var(--accent);padding:10px 14px;border-radius:10px;text-decoration:none;border:1px solid rgba(4,86,217,0.12);font-weight:700}
+.secondary{display:inline-block;background:transparent;color:var(--medium-green);padding:10px 14px;border-radius:10px;text-decoration:none;border:1px solid rgba(79,102,66,0.12);font-weight:700}
 
-.card{background:#fff;border:1px solid #eef0f6;padding:22px;border-radius:var(--radius);margin:22px 0;box-shadow:0 6px 18px rgba(12,18,46,0.04)}
+.card{background:#ffffff;border:1px solid rgba(31,54,35,0.06);padding:22px;border-radius:var(--radius);margin:22px 0;box-shadow:0 6px 18px rgba(31,54,35,0.04)}
 .card h1,.card h2{margin-top:0}
 .case-meta{color:var(--muted);font-size:14px;margin-bottom:12px}
 
@@ -34,7 +37,7 @@ footer{padding:34px 0;color:var(--muted);font-size:14px}
 .card.revealed{opacity:1;transform:none}
 
 /* Accessibility focus */
-a:focus{outline:3px solid rgba(4,86,217,0.18);outline-offset:3px}
+a:focus{outline:3px solid rgba(79,102,66,0.18);outline-offset:3px}
 
 @media (max-width:800px){#hero h1{font-size:28px}}
 
@@ -42,8 +45,36 @@ a:focus{outline:3px solid rgba(4,86,217,0.18);outline-offset:3px}
 
 /* Decorative hero shapes */
 #hero{position:relative;overflow:visible}
-.hero-decor{position:absolute;right:-40px;top:-40px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(4,86,217,0.18),rgba(4,86,217,0.06) 40%,transparent 60%);filter:blur(18px);transform:rotate(10deg);pointer-events:none}
-.hero-decor::after{content:'';position:absolute;left:-60px;bottom:-60px;width:160px;height:160px;border-radius:20%;background:linear-gradient(135deg,rgba(4,86,217,0.06),rgba(4,86,217,0.02));filter:blur(8px);}
+#hero .hero-decor{position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(79,102,66,0.20),rgba(79,102,66,0.06) 40%,transparent 60%);filter:blur(18px);transform:rotate(10deg);pointer-events:none;z-index:0}
+#hero .hero-decor::after{content:'';position:absolute;left:-60px;bottom:-60px;width:120px;height:120px;border-radius:20%;background:linear-gradient(135deg,rgba(79,102,66,0.08),rgba(79,102,66,0.03));filter:blur(8px);}
 
 /* Accent shape at page bottom */
-body::after{content:'';position:fixed;left:-120px;bottom:-120px;width:360px;height:360px;border-radius:40%;background:radial-gradient(circle at 40% 40%,rgba(4,86,217,0.04),transparent 60%);pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;left:-120px;bottom:-120px;width:360px;height:360px;border-radius:40%;background:radial-gradient(circle at 40% 40%,rgba(79,102,66,0.05),transparent 60%);pointer-events:none;z-index:0}
+
+/* Hero content styling (no gradient) */
+#hero > *{position:relative;z-index:2}
+#hero h1{color:var(--darkest-green)}
+#hero .lead{color:var(--muted)}
+#hero .cta{background:var(--medium-green);color:#fff}
+#hero .secondary{color:var(--medium-green);border-color:rgba(79,102,66,0.12)}
+
+/* Card grid for case studies */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:18px}
+@media (max-width:900px){.cards-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.cards-grid{grid-template-columns:1fr}}
+
+/* Header actions layout */
+.header-row{display:flex;justify-content:space-between;align-items:center}
+.nav-right{display:flex;gap:12px;align-items:center}
+
+/* Dark mode header grainy gradient */
+@media (prefers-color-scheme: dark){
+	header{color:#e6efe8}
+	header{
+		background: linear-gradient(180deg, rgba(31,54,35,0.95), rgba(31,54,35,0.9));
+		background-blend-mode:overlay;
+		box-shadow: inset 0 0 120px rgba(0,0,0,0.35);
+		position:relative;overflow:hidden
+	}
+	header::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:3px 3px;opacity:0.25;mix-blend-mode:overlay;pointer-events:none}
+}

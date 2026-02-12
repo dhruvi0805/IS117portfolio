@@ -5,50 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dhruvi Malusare — UX Designer</title>
     <meta name="description" content="Research-first UX/Product Designer — NJ/NY" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- NOTE: Structure-only placeholder. No scripts or build logic added. -->
   </head>
   <body>
     <!-- Header -->
     <header>
-      <nav class="container">
-        <a href="/site/public/index.html">Home</a>
-        <a href="/site/public/index.html#case-studies">Case Studies</a>
-        <a href="/site/public/index.html#about">About</a>
-        <a href="/site/public/index.html#contact">Contact</a>
-      </nav>
+      <div class="container header-row">
+        <nav>
+          <a href="/site/public/index.html">Home</a>
+          <a href="/site/public/index.html#case-studies">Case Studies</a>
+          <a href="/site/public/index.html#about">About</a>
+          <a href="/site/public/index.html#contact">Contact</a>
+        </nav>
+        <div class="nav-right">
+          <a class="cta" href="https://drive.google.com/file/d/1jTkieE-YEUbyg7JlNmd31w7dVF_IyLep/view?usp=sharing" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+      </div>
     </header>
 
     <!-- Hero (above the fold) -->
     <section id="hero" class="container">
       <h1>Dhruvi Malusare</h1>
-      <p class="lead">Research-first UX Designer focused on accessibility and measurable impact.</p>
+      <p class="lead">Product-focused problem solver with experience leading product discovery, defining requirements, and translating user needs into scalable digital solutions. Strong foundation in business, and UX with hands-on experience writing PRDs, conducting stakeholder interviews, and delivering end-to-end product concepts. Proven leader managing cross-functional teams and logistical operations.</p>
       <div style="margin-top:18px">
         <a class="cta" href="#contact">Contact</a>
         <a class="secondary" href="#case-studies">View Works</a>
-        <a href="#resume" style="margin-left:12px;color:var(--accent);font-weight:700">Download Resume</a>
       </div>
       <div aria-hidden="true" class="hero-decor"></div>
     </section>
 
     <!-- Case Studies list (placeholders) -->
     <main id="case-studies" class="container">
-      <article id="wayfinding" class="card">
-        <h2>Wayfinding (Flagship)</h2>
-        <p>Designed a mobile navigation app improving physical wayfinding for NJIT Library. Includes interviews, contextual inquiries, prototypes, and measurable impact.</p>
-        <a href="/site/public/case-studies/wayfinding.html" class="cta">View full case study</a>
-      </article>
+      <div class="cards-grid">
+        <article id="wayfinding" class="card">
+          <h3>Wayfinding</h3>
+          <p class="case-meta">Mobile navigation app for NJIT Library — interviews, contextual inquiries, prototypes.</p>
+          <p>Hybrid indoor navigation prototype that reduced navigation time by ~9.5 minutes (~70%).</p>
+          <a href="/site/public/case-studies/wayfinding.html" class="cta">View case study</a>
+        </article>
 
-      <article id="research-gate">
-        <h2>Research Gate</h2>
-        <p>Short summary placeholder.</p>
-        <a href="../content/case-studies/research-gate.md">View source</a>
-      </article>
+        <article id="research-gate" class="card">
+          <h3>Research Gate</h3>
+          <p class="case-meta">Platform to surface research opportunities to students.</p>
+          <p>Designed accessible UI and prototype after stakeholder interviews; improved discovery of research events.</p>
+          <a href="/site/public/case-studies/research-gate.html" class="cta">View case study</a>
+        </article>
 
-      <article id="thrive">
-        <h2>Thrive</h2>
-        <p>Short summary placeholder.</p>
-        <a href="../content/case-studies/thrive.md">View source</a>
-      </article>
+        <article id="thrive" class="card">
+          <h3>Thrive</h3>
+          <p class="case-meta">Plant diagnosis and care guidance app concept.</p>
+          <p>Interactive prototype for scanning and care tracking with proposed e-commerce integration.</p>
+          <a href="/site/public/case-studies/thrive.html" class="cta">View case study</a>
+        </article>
+      </div>
     </main>
 
     <!-- About -->
@@ -60,11 +70,13 @@
     <!-- Contact / Lead-Gen -->
     <section id="contact" class="container">
       <h2>Contact</h2>
-      <p>To request a portfolio review or apply, email: <a href="mailto:you@example.com">you@example.com</a> (replace with your email) or use the form (to be added).</p>
+      <p>Email: <a href="mailto:drm23@njit.edu">drm23@njit.edu</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/dhruvi-malusare/">dhruvi-malusare</a></p>
+      <p>Resume: <a href="https://drive.google.com/file/d/1jTkieE-YEUbyg7JlNmd31w7dVF_IyLep/view?usp=sharing" target="_blank" rel="noopener">Download PDF</a></p>
     </section>
 
     <footer class="container">
-      <p>&copy; Dhruvi Malusare • <a href="https://www.linkedin.com/in/dhruvi-malusare/">LinkedIn</a></p>
+      <p>&copy; Dhruvi Malusare • <a href="mailto:drm23@njit.edu">drm23@njit.edu</a> • <a href="https://www.linkedin.com/in/dhruvi-malusare/">LinkedIn</a> • <a href="https://drive.google.com/file/d/1jTkieE-YEUbyg7JlNmd31w7dVF_IyLep/view?usp=sharing" target="_blank" rel="noopener">Resume</a></p>
     </footer>
     <link rel="stylesheet" href="/site/public/styles.css">
     <script src="/site/public/js/main.js"></script>

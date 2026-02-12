@@ -13,7 +13,11 @@
 html,body{height:100%;margin:0;font-family:'Merriweather', Georgia, 'Times New Roman', serif;color:var(--darkest-green);background:var(--beige);-webkit-font-smoothing:antialiased}
 .container{max-width:var(--max-width);margin:0 auto;padding:28px}
 .container{max-width:var(--max-width);margin:0 auto;padding:28px}
-header{border-bottom:1px solid rgba(31,54,35,0.06);padding:18px 0}
+header{border-bottom:1px solid rgba(31,54,35,0.06);padding:8px 0}
+/* Make inline hyperlinks match button color */
+body a{color:var(--medium-green);text-decoration:none}
+body a:hover{text-decoration:underline}
+
 nav a{margin-right:18px;color:var(--muted);text-decoration:none;font-weight:600}
 nav a:hover{color:#ffffff}
 
@@ -67,14 +71,59 @@ body::after{content:'';position:fixed;left:-120px;bottom:-120px;width:360px;heig
 .header-row{display:flex;justify-content:space-between;align-items:center}
 .nav-right{display:flex;gap:12px;align-items:center}
 
-/* Dark mode header grainy gradient */
-@media (prefers-color-scheme: dark){
-	header{color:#e6efe8}
-	header{
-		background: linear-gradient(180deg, rgba(31,54,35,0.95), rgba(31,54,35,0.9));
-		background-blend-mode:overlay;
-		box-shadow: inset 0 0 120px rgba(0,0,0,0.35);
-		position:relative;overflow:hidden
+/* Dark mode theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-dark: #06110c;
+		--card-dark: #0e2018;
+		--muted-light: #cbd5cc;
+		--muted-dim: #9fb29a;
 	}
-	header::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:3px 3px;opacity:0.25;mix-blend-mode:overlay;pointer-events:none}
+
+	html, body {
+		background: var(--bg-dark);
+		color: var(--beige);
+	}
+
+	header {
+		color: var(--beige);
+		background: linear-gradient(180deg, rgba(31,54,35,0.98), rgba(12,22,16,0.96));
+		background-blend-mode: overlay;
+		box-shadow: inset 0 0 120px rgba(0,0,0,0.6);
+		position: relative;
+		overflow: hidden;
+	}
+	header::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+		background-size: 3px 3px;
+		opacity: 0.16;
+		mix-blend-mode: overlay;
+		pointer-events: none;
+	}
+
+	nav a { color: var(--muted-light); }
+	nav a:hover { color: #ffffff; }
+
+	/* Cards and panels */
+	.card { background: var(--card-dark); border-color: rgba(255,255,255,0.04); box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+	.case-meta { color: var(--muted-dim); }
+
+	footer { color: var(--muted-light); }
+
+	/* Hero adjustments for dark */
+	#hero h1 { color: #e6f0e9; }
+	#hero .lead { color: rgba(230,240,233,0.9); }
+	#hero .cta { background: var(--medium-green); color: #fff; }
+	#hero .secondary { color: rgba(230,240,233,0.9); border-color: rgba(230,240,233,0.06); }
+
+	/* Buttons and links */
+	.cta { background: var(--medium-green); color: #fff; }
+	.secondary { color: var(--beige); border-color: rgba(255,255,255,0.06); }
+
+	/* Decorative shapes less intense in dark */
+	.hero-decor { filter: blur(14px); opacity: 0.6; }
+	body::after { opacity: 0.25; }
 }

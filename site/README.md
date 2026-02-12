@@ -1,6 +1,6 @@
 Project Title: Dhruvi Malusare — UX Portfolio (AGENTS)
 
-Live Link: https://REPLACE-WITH-DEPLOY-URL
+Live Link: http://127.0.0.1:3000/site/public/index.html?serverWindowId=8550fec4-fabe-459f-8b7d-24430feb2d65
 
 Description
 This repository contains the source and static scaffold for the AGENTS portfolio site — a research-first UX portfolio showcasing long-form and short-form case studies, accessibility notes, and downloadable resume assets.

@@ -1,0 +1,9 @@
+{
+  "name": "dhruvi-portfolio-site",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "echo \"Start script placeholder (no logic added)\"",
+    "build": "echo \"Build script placeholder (no logic added)\""
+  }
+}
